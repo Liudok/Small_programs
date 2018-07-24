@@ -50,41 +50,8 @@ int main()
 	  }
 
 	  auto func = [](double a){return sqrt(a);};
-	  double res = sum_func(v.begin(), v.end(), (double)0.0, 4, func);
+	  std::cout << int cores = std::thread::hardware_concurrency() << std::endl;
+	  double res = sum_func(v.begin(), v.end(), (double)0.0, cores, func);
 	  std::cout << res << std::endl;
-	   // int i = 0;
-
-	   // int a = 9;
-
-	   // std::cout << std::thread::hardware_concurrency() << std::endl;
-
-	   // std::thread t[4];
-
- 
-
-	   // while (i < 4)
-
-	   // {
-
-	   //       t[i] = std::thread(hello, std::ref(a));
-
-	   //       i++;
-
-	   // }
-
-	   // i = 0;
-
-	   // while (i < 4)
-
-	   // {
-
-	   //       t[i].join();
-
-	   //       i++;
-
-	   // }
-
-	   // std::cout << "a = " << a<< std::endl;
-
 }
 
